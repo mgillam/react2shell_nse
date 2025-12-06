@@ -1,0 +1,12 @@
+{
+  "3000": {
+    "path": "nextjs/nextjs15_5_6",
+    "label": "Next.js 15.5.6",
+    "expect_vuln": true
+  },
+  "3001": {
+    "path": "nextjs/nextjs15_5_7",
+    "label": "Next.js 15.5.7",
+    "expect_vuln": false
+  }
+}
