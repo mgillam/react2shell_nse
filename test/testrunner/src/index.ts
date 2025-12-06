@@ -69,7 +69,7 @@ for (const port of Object.keys(expectedResults)) {
 function generateMarkdownReport(results: ScanResult[]): string {
   let md = `# React2Shell NSE Test Report\n\n`;
     md += `| Port | App | Test Success | Expected Vulnerable | Detected Vulnerable | Listening |\n`;
-  md += `|------|-----|--------------------|--------------------|-----------|\n`;
+  md += `|------|-----|--------------------|--------------------|-----------|---------|\n`;
   for (const r of results) {
       const testSuccess = r.expect_vuln === r.detected_vuln ? "✅" : "❌";
       md += `| ${r.port} | ${r.label} | ${testSuccess} | ${r.expect_vuln ? "✅" : "❌"} | ${r.detected_vuln ? "✅" : "❌"} | ${r.listening ? "✅" : "❌"} |\n`;
