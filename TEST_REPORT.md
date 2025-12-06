@@ -1,32 +1,32 @@
 # React2Shell NSE Test Report
 
-| Port | App | Expected Vulnerable | Detected Vulnerable | Listening |
+| Port | App | Test Success | Expected Vulnerable | Detected Vulnerable | Listening |
 |------|-----|--------------------|--------------------|-----------|
-| 3000 | Next.js 15.5.6 | ✅ | ✅ | ✅ |
-| 3001 | Next.js 15.5.7 | ❌ | ❌ | ✅ |
+| 3000 | Next.js 15.5.6 | ✅ | ✅ | ✅ | ✅ |
+| 3001 | Next.js 15.5.7 | ✅ | ❌ | ❌ | ✅ |
 
 ## Detailed Nmap Output
 
 ### Port 3000 (Next.js 15.5.6)
 
 ```
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-06 17:23 EST
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-06 17:29 EST
 NSE: Loaded 1 scripts for scanning.
 NSE: Script Pre-scanning.
-Initiating NSE at 17:23
-Completed NSE at 17:23, 0.00s elapsed
-Initiating Ping Scan at 17:23
+Initiating NSE at 17:29
+Completed NSE at 17:29, 0.00s elapsed
+Initiating Ping Scan at 17:29
 Scanning localhost (127.0.0.1) [2 ports]
-Completed Ping Scan at 17:23, 0.00s elapsed (1 total hosts)
-Initiating Connect Scan at 17:23
+Completed Ping Scan at 17:29, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 17:29
 Scanning localhost (127.0.0.1) [1 port]
 Discovered open port 3000/tcp on 127.0.0.1
-Completed Connect Scan at 17:23, 0.00s elapsed (1 total ports)
+Completed Connect Scan at 17:29, 0.00s elapsed (1 total ports)
 NSE: Script scanning 127.0.0.1.
-Initiating NSE at 17:23
-Completed NSE at 17:23, 0.48s elapsed
+Initiating NSE at 17:29
+Completed NSE at 17:29, 0.52s elapsed
 Nmap scan report for localhost (127.0.0.1)
-Host is up (0.00022s latency).
+Host is up (0.00055s latency).
 Other addresses for localhost (not scanned): ::1
 
 PORT     STATE SERVICE
@@ -34,42 +34,42 @@ PORT     STATE SERVICE
 |_detect_react2shell: VULNERABLE: React2Shell detected!
 
 NSE: Script Post-scanning.
-Initiating NSE at 17:23
-Completed NSE at 17:23, 0.00s elapsed
+Initiating NSE at 17:29
+Completed NSE at 17:29, 0.00s elapsed
 Read data files from: /usr/local/bin/../share/nmap
-Nmap done: 1 IP address (1 host up) scanned in 0.61 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.65 seconds
 
 ```
 
 ### Port 3001 (Next.js 15.5.7)
 
 ```
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-06 17:23 EST
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-06 17:29 EST
 NSE: Loaded 1 scripts for scanning.
 NSE: Script Pre-scanning.
-Initiating NSE at 17:23
-Completed NSE at 17:23, 0.00s elapsed
-Initiating Ping Scan at 17:23
+Initiating NSE at 17:29
+Completed NSE at 17:29, 0.00s elapsed
+Initiating Ping Scan at 17:29
 Scanning localhost (127.0.0.1) [2 ports]
-Completed Ping Scan at 17:23, 0.00s elapsed (1 total hosts)
-Initiating Connect Scan at 17:23
+Completed Ping Scan at 17:29, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 17:29
 Scanning localhost (127.0.0.1) [1 port]
 Discovered open port 3001/tcp on 127.0.0.1
-Completed Connect Scan at 17:23, 0.00s elapsed (1 total ports)
+Completed Connect Scan at 17:29, 0.00s elapsed (1 total ports)
 NSE: Script scanning 127.0.0.1.
-Initiating NSE at 17:23
-Completed NSE at 17:23, 0.48s elapsed
+Initiating NSE at 17:29
+Completed NSE at 17:29, 0.54s elapsed
 Nmap scan report for localhost (127.0.0.1)
-Host is up (0.00024s latency).
+Host is up (0.00022s latency).
 Other addresses for localhost (not scanned): ::1
 
 PORT     STATE SERVICE
 3001/tcp open  nessus
 
 NSE: Script Post-scanning.
-Initiating NSE at 17:23
-Completed NSE at 17:23, 0.00s elapsed
+Initiating NSE at 17:29
+Completed NSE at 17:29, 0.00s elapsed
 Read data files from: /usr/local/bin/../share/nmap
-Nmap done: 1 IP address (1 host up) scanned in 0.58 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.65 seconds
 
 ```

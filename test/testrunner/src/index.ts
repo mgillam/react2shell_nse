@@ -68,10 +68,11 @@ for (const port of Object.keys(expectedResults)) {
 
 function generateMarkdownReport(results: ScanResult[]): string {
   let md = `# React2Shell NSE Test Report\n\n`;
-  md += `| Port | App | Expected Vulnerable | Detected Vulnerable | Listening |\n`;
+    md += `| Port | App | Test Success | Expected Vulnerable | Detected Vulnerable | Listening |\n`;
   md += `|------|-----|--------------------|--------------------|-----------|\n`;
   for (const r of results) {
-    md += `| ${r.port} | ${r.label} | ${r.expect_vuln ? "✅" : "❌"} | ${r.detected_vuln ? "✅" : "❌"} | ${r.listening ? "✅" : "❌"} |\n`;
+      const testSuccess = r.expect_vuln === r.detected_vuln ? "✅" : "❌";
+      md += `| ${r.port} | ${r.label} | ${testSuccess} | ${r.expect_vuln ? "✅" : "❌"} | ${r.detected_vuln ? "✅" : "❌"} | ${r.listening ? "✅" : "❌"} |\n`;
   }
   md += `\n## Detailed Nmap Output\n`;
   for (const r of results) {
