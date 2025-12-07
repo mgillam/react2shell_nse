@@ -9,7 +9,8 @@ This is based on the POC work done by liyander (CyberGhost05), which can be foun
 - Works against any HTTP service (custom ports supported)
 - Verbose mode for reporting non-vulnerable hosts
 - Does not perform any exploitation, only detection
-- **Currently only validated against a limited set of Next.js applications**
+- **Currently only validated against a limited set of Next.js applications. I believe it will work against most applications where the vulnerability is discoverable on the root path, which includes the affected Next.js 15 versions in their default configuration. In my experimentation with react-router, a vulnerable configuration is more dependent on how the specific app is built.**
+- Test results and sample output in the [TEST_REPORT.md](./TEST_REPORT.md)
 
 ## Usage
 
